@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            header nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+.compose-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.email-list {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.email-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+    .email-item:last-child {
+        border-bottom: none;
+    }
+
+    .email-item .sender {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .email-item .subject {
+        color: #333;
+    }
+
+    .email-item .date {
+        color: #888;
+    }
+
+.email-content {
+    flex: 2;
+    padding-left: 20px;
+}
+
+    .email-content h2 {
+        margin-top: 0;
+    }
+
+    .email-content .body {
+        margin-top: 20px;
+        color: #333;
+    }
+
+.email-actions {
+    margin-top: 20px;
+}
+
+    .email-actions button {
+        background-color: #008CBA;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+        .email-actions button:hover {
+            background-color: #005F6B;
+        }

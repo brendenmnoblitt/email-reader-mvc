@@ -1,0 +1,32 @@
+﻿@model List<EmailDetailsModel>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Reader</title>
+    <script>var emailDetailsList = @Html.Raw(Json.Serialize(Model)); console.log(emailDetailsList);</script>
+</head>
+<body>
+        <div class="row justify-content-center" style="display: contents;">
+            <section class="container list-group overflow-scroll col-3" style="max-height: 100vh;">
+                @foreach (var emailDetails in Model)
+                {
+                    <div class="list-group-item" data-email-id="@emailDetails.MessageID">
+                        <div class="subject">@emailDetails.SubjectLine</div>
+                        <div class="sender">@(string.IsNullOrEmpty(emailDetails.SenderName) ? emailDetails.SenderEmail : emailDetails.SenderName)</div>
+                    </div>
+                }
+            </section>
+            <section class="container overflow-scroll col-6" id="email-content" style="max-height: 100vh;">
+                <h2 id="email-subject"></h2>
+                <div class="sender-name" id="email-sender-name"></div>
+                <div class="sender-email" id="email-sender-addr"></div>
+                <div class="date"><span id="email-date"></span></div>
+                <div class="body" id="email-body">
+                </div>
+            </section>
+        </div>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

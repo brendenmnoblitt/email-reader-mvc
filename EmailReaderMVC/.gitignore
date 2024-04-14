@@ -1,0 +1,15 @@
+# Secrets
+/secrets
+
+# Binaries
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# UI libraries
+/wwwroot/lib
